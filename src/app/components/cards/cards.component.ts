@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Cards } from './../../models/cards.model'
 
 @Component({
   selector: 'app-cards',
