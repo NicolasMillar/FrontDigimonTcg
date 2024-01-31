@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { TitleServiceService } from './service/title-service.service';
 import { CardsComponent } from "./components/cards/cards.component";
@@ -9,7 +10,7 @@ import { CardsComponent } from "./components/cards/cards.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, SidebarComponent, CardsComponent]
+    imports: [RouterOutlet, SidebarComponent, CardsComponent, FormsModule, ReactiveFormsModule]
 })
 export class AppComponent {
   title = 'Digimon Tcg';
