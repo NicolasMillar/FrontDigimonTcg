@@ -5,6 +5,7 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { TitleServiceService } from './service/title-service.service';
 import { CardsComponent } from "./components/cards/cards.component";
 
+
 @Component({
     selector: 'app-root',
     standalone: true,

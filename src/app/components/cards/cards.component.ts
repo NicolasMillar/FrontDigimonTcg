@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CardComponent } from "../card/card.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Cards } from '../../models/cards.model';
 
 @Component({
     selector: 'app-cards',
@@ -10,16 +11,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     imports: [CardComponent, HttpClientModule]
 })
 export class CardsComponent implements OnInit{
- http = inject(HttpClient)
+ http = inject(HttpClient);
+ cards: Cards[] = [];
 
  ngOnInit(): void {
    this.fetchData();
+   console.log(this.cards[0].nombre)
  }
 
  fetchData(){
-  this.http.get('http://127.0.0.1:5000/cards').
+  this.http.get<Cards[]>('http://127.0.0.1:5000/cards').
   subscribe((data) =>{
-    console.log(data)
+    this.cards = data;
   })
  }
 }
