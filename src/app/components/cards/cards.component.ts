@@ -16,7 +16,6 @@ export class CardsComponent implements OnInit{
 
  ngOnInit(): void {
    this.fetchData();
-   console.log(this.cards[0].nombre)
  }
 
  fetchData(){

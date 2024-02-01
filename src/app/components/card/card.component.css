@@ -1,0 +1,26 @@
+.mat-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+  
+.mat-card-header {
+    text-align: center; 
+    padding: 16px;
+}
+  
+.mat-card-title {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    font-weight: bold;
+}
+  
+.mat-card-image {
+    width: 100%;
+    height: auto;
+}
+    
